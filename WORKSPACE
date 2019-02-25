@@ -59,7 +59,7 @@ yarn_install(
     name = "npm",
     package_json = "//:package.json",
     yarn_lock = "//:yarn.lock",
-    data = ["@angular//:LICENSE"]
+#    data = ["@angular//:LICENSE"]
 )
 
 # Install all bazel dependencies of our npm packages
