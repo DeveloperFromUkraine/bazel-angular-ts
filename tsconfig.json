@@ -17,14 +17,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "include": [
-      "node_modules/@angular/**/*"
-    ],
-    "exclude": [
-      "node_modules/@angular/bazel/**",
-      "node_modules/@angular/compiler-cli/**",
-      "node_modules/@angular/tsc-wrapped/**"
     ]
   }
 }
