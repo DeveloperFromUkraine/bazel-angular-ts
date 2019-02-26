@@ -3,21 +3,22 @@ load("@angular//:index.bzl", "ng_module")
 package(default_visibility = ["//visibility:public"])
 
 ng_module(
-    name = "accordion-component-module",
-    srcs = [
-        "accordion.module.ts",
-        "accordion.component.ts",
-        "accordion-group.component.ts",
-        "index.ts",
-        "public_api.ts",
-        "accordion.config.ts"
-    ],
-    tsconfig = "//:tsconfig.json",
-    assets = ["accordion-group.component.html"],
-    deps = [
-        "@npm//tslib",
-        "@npm//@types",
-        "@angular//packages/core",
-        "@angular//packages/common",
-    ]
+  name = "accordion-component-module",
+  srcs = [
+    "accordion.module.ts",
+    "accordion.component.ts",
+    "accordion-group.component.ts",
+    "index.ts",
+    "public_api.ts",
+    "accordion.config.ts"
+  ],
+  tsconfig = "//:tsconfig.json",
+  assets = ["accordion-group.component.html"],
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+    "@angular//packages/core",
+    "@angular//packages/common",
+    "//src/utils:theme-provider"
+  ]
 )

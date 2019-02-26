@@ -1,24 +1,29 @@
-load("@angular//:index.bzl", "ng_module", "ng_package" )
+load("@angular//:index.bzl", "ng_module", "ng_package")
 load("@build_bazel_rules_nodejs//:defs.bzl", "npm_package")
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
 
 package(default_visibility=["//visibility:public"])
 
 # Root "@ngx-bootstrap" entry-point.
-ng_module(
-    name = "ngx-bootstrap",
-    srcs = ["index.ts","locale.ts"],
-    deps = [
-      "@npm//tslib",
-      "@npm//@types",
-      "@angular//packages/core",
-      "//src/accordion:accordion-component-module"
-    ]
+ts_library(
+  name = "ngx-bootstrap",
+  srcs = [
+    "index.ts",
+    "locale.ts"
+  ],
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+    "@angular//packages/core",
+    "//src/accordion:accordion-component-module"
+  ]
 )
 
 # Creates the @ngx-bootstrap package published to npm.
 npm_package(
   name = "npm_package",
-  srcs = ["//:package.json"],
+  srcs = ["//src:package.json"],
   deps = [":ngx-bootstrap"],
   replacements = {"//internal/": "//"},
 )
