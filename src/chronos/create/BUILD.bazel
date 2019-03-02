@@ -1,0 +1,148 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos-create-check-overflow",
+  srcs = ["check-overflow.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-clone",
+  srcs = ["clone.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-date-from-array",
+  srcs = ["date-from-array.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-from-anything",
+  srcs = ["from-anything.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-from-array",
+  srcs = ["from-array.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-from-object",
+  srcs = ["from-object.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-from-string",
+  srcs = ["from-string.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-from-string-and-array",
+  srcs = ["from-string-and-array.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-from-string-and-format",
+  srcs = ["from-string-and-format.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-local",
+  srcs = ["local.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-parsing-types",
+  srcs = ["parsing.types.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/locale:chronos-locale-class",
+#    "//src/chronos:index",
+#    "//src/chronos/test:chronos-test-chain"
+  ]
+)
+
+ts_library(
+  name = "chronos-create-parsing-flags",
+  srcs = ["parsing-flags.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    ":chronos-create-parsing-types"
+  ]
+)
+
+ts_library(
+  name = "chronos-create-utc",
+  srcs = ["utc.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-create-valid",
+  srcs = ["valid.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+

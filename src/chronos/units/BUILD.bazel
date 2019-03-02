@@ -1,0 +1,241 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+# Entry point to units
+ts_library(
+  name = "chronos-units-intex",
+  srcs = ["index.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-aliases",
+  srcs = ["aliases.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos:types",
+#    "//src/chronos/create:chronos-create-clone",
+#    "//src/chronos/utils:chronos-utils-date-setters",
+#    "//src/chronos/utils:chronos-utils-date-getters",
+#    "//src/chronos/utils:chronos-utils-abs-round",
+#    "//src/chronos/duration:chronos-duration-constructor",
+#    "//src/chronos/duration:chronos-duration-create",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-constants",
+  srcs = ["constants.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-day-of-month",
+  srcs = ["day-of-month.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/create:chronos-create-parsing-types"
+  ]
+)
+
+ts_library(
+  name = "chronos-units-day-of-week",
+  srcs = ["day-of-week.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/locale:chronos-locale-locales",
+#    "//src/chronos/format:chronos-format",
+#    "//src/chronos/locale:chronos-locale-locales",
+#    "//src/chronos/locale:chronos-locale-class",
+#    "//src/chronos/moment:chronos-moment-add-subtract",
+#    "//src/chronos/create:chronos-create-parsing-types",
+#    "//src/chronos/create:chronos-create-parsing-flags",
+#    "//src/chronos:types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/utils:chronos-utils-date-getters",
+#    "//src/chronos/parse:chronos-parse-token",
+#    "//src/chronos/parse:chronos-parse-regex",
+#    ":chronos-units-priorities",
+#    ":chronos-units-aliases"
+  ]
+)
+
+ts_library(
+  name = "chronos-units-day-of-year",
+  srcs = ["day-of-year.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-hour",
+  srcs = ["hour.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-millisecond",
+  srcs = ["millisecond.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-minute",
+  srcs = ["minute.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-month",
+  srcs = ["month.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-offset",
+  srcs = ["offset.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-priorities",
+  srcs = ["priorities.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-quarter",
+  srcs = ["quarter.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-second",
+  srcs = ["second.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-timestamp",
+  srcs = ["timestamp.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-timezone",
+  srcs = ["timezone.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-week",
+  srcs = ["week.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/moment:chronos-moment-add-subtract",
+#    "//src/chronos/locale:chronos-locale-locales",
+#    "//src/chronos/locale:chronos-locale-class",
+#    "//src/chronos/create:chronos-create-parsing-types",
+#    "//src/chronos:types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/parse:chronos-parse-token",
+#    ":chronos-units-priorities",
+#    ":chronos-units-aliases",
+#    "//src/chronos/parse:chronos-parse-regex",
+#    ":chronos-units-week-calendar-utils",
+#    "//src/chronos/format:chronos-format",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-week-calendar-utils",
+  srcs = ["week-calendar-utils.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-week-year",
+  srcs = ["week-year.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-units-year",
+  srcs = ["year.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+

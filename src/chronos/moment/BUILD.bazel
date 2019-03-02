@@ -1,0 +1,58 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos-moment-add-subtract",
+  srcs = ["add-subtract.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos:types",
+
+  ]
+)
+
+ts_library(
+  name = "chronos-moment-calendar",
+  srcs = ["calendar.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/create:chronos-create-parsing-types",
+  ]
+)
+
+ts_library(
+  name = "chronos-moment-diff",
+  srcs = ["diff.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-moment-from",
+  srcs = ["from.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-moment-min-max",
+  srcs = ["min-max.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+

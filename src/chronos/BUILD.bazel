@@ -1,0 +1,57 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos",
+  srcs = ["format.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "types",
+  srcs = ["types.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/locale:chronos-locale-class",
+#    "//src/chronos/create:chronos-create-parsing-types"
+  ]
+)
+
+ts_library(
+  name = "utils",
+  srcs = ["utils.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "index",
+  srcs = ["index.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+    ":public_api"
+  ]
+)
+
+ts_library(
+  name = "public_api",
+  srcs = ["public_api.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/i18n:other"
+  ]
+)

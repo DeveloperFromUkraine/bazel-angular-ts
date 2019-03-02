@@ -12,6 +12,7 @@ ng_module(
     "public_api.ts",
     "accordion.config.ts"
   ],
+  module_name = "src/accordion",
   tsconfig = "//:tsconfig.json",
   assets = ["accordion-group.component.html"],
   deps = [

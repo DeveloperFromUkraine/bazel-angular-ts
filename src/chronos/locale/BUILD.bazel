@@ -1,0 +1,57 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos-locale-calendar",
+  srcs = ["calendar.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-locale-class",
+  srcs = ["locale.class.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/units:chronos-units-day-of-week"
+  ]
+)
+
+alias(
+    name = "test",
+    actual = ":chronos-locale-class"
+)
+
+ts_library(
+  name = "chronos-locale-defaults",
+  srcs = ["locale.defaults.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    ":chronos-locale-calendar",
+#    ":test"
+  ]
+)
+
+ts_library(
+  name = "chronos-locale-locales",
+  srcs = ["locales.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/units:chronos-units-day-of-month"
+#    ":chronos-locale-class"
+#    ":chronos-locale-defaults"
+  ]
+)
+

@@ -1,0 +1,50 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos-test-chain",
+  srcs = ["chain.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos:index",
+#    "//src/chronos:types",
+#    "//src/chronos/format:chronos-format",
+#    "//src/chronos/utils:chronos-utils-date-setters",
+#    "//src/chronos/utils:chronos-utils-date-getters",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/utils:chronos-utils-date-compare",
+#    "//src/chronos/utils:chronos-utils-start-end-of",
+#    "//src/chronos/create:chronos-create-clone",
+#    "//src/chronos/create:chronos-create-from-string-and-format",
+#    "//src/chronos/create:chronos-create-parsing-types",
+#    "//src/chronos/create:chronos-create-from-anything",
+#    "//src/chronos/locale:chronos-locale-class",
+#    "//src/chronos/units:chronos-units-offset",
+#    "//src/chronos/units:chronos-units-year",
+#    "//src/chronos/units:chronos-units-month",
+#    "//src/chronos/units:chronos-units-day-of-week",
+#    "//src/chronos/units:chronos-units-week",
+#    "//src/chronos/units:chronos-units-week-year",
+#    "//src/chronos/units:chronos-units-quarter",
+#    "//src/chronos/units:chronos-units-day-of-year",
+#    "//src/chronos/units:chronos-units-timezone",
+#    "//src/chronos/moment:chronos-moment-diff",
+#    "//src/chronos/moment:chronos-moment-calendar",
+#    "//src/chronos/moment:chronos-moment-min-max",
+#    "//src/chronos/duration:chronos-duration-constructor",
+#    "//src/chronos/duration:chronos-duration-create",
+  ]
+)
+
+ts_library(
+  name = "chronos-test-test-helper",
+  srcs = ["test-helper.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)

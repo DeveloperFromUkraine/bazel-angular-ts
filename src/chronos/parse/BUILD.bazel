@@ -1,0 +1,26 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos-parse-regex",
+  srcs = ["regex.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+#    "//src/chronos/locale:chronos-locale-class"
+  ]
+)
+
+ts_library(
+  name = "chronos-parse-token",
+  srcs = ["token.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/utils:chronos-utils-type-checks",
+  ]
+)

@@ -1,0 +1,106 @@
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+  name = "chronos-utils-abs-ceil",
+  srcs = ["abs-ceil.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-abs-round",
+  srcs = ["abs-round.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-compare-arrays",
+  srcs = ["compare-arrays.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-date-compare",
+  srcs = ["date-compare.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-date-getters",
+  srcs = ["date-getters.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/create:chronos-create-date-from-array"
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-date-setters",
+  srcs = ["date-setters.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-defaults",
+  srcs = ["defaults.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-start-end-of",
+  srcs = ["start-end-of.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+#    "//src/chronos/moment:chronos-moment-add-subtract"
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-type-checks",
+  srcs = ["type-checks.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+    "//src/chronos:utils"
+  ]
+)
+
+ts_library(
+  name = "chronos-utils-zero-fill",
+  srcs = ["zero-fill.ts"],
+  tsconfig = "//:tsconfig.json",
+  deps = [
+    "@npm//tslib",
+    "@npm//@types",
+  ]
+)
